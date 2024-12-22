@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Edited One",
+      "details": "This is Edited",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Add More Icons",
+      "details": "Add more icons to the project",
+      "completed": true
+    }
+  ]
+}
