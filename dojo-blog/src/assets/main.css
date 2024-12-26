@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+	--color-dark: #000000;
+	--color-light: #ffffff;
+	--color-primary: #1a8fe3;
+	--size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+	--size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
+	--size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
+	--size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
+	--size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+	font-family: Inter, sans-serif;
+	font-weight: 800;
+	text-wrap: pretty;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+body {
+	background: var(--color-light);
+	color: var(--color-dark);
+	padding: 2em;
+	font-family: Georgia, serif;
+	font-size: var(--size-step-0);
+	line-height: 1.7;
+}
+
+a {
+	color: currentColor;
+	opacity: 0.6;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 1;
+		text-decoration: underline;
+		text-decoration-color: var(--color-primary);
+		text-decoration-thickness: 0.3ex;
+		text-underline-offset: 0.3ex;
+	}
+}
+
+h1 {
+	font-size: var(--size-step-4);
+}
+
+h2 {
+	font-size: var(--size-step-3);
+}
+
+h3 {
+	font-size: var(--size-step-2);
+}
+
+article > * {
+	max-width: 65ch;
+}
+
+blockquote {
+	max-width: 50ch;
+}
+
+h1 {
+	max-width: 20ch;
+}
+
+h2,
+h3 {
+	max-width: 28ch;
+}
+
+blockquote {
+	padding-inline-start: 1em;
+	border-inline-start: 0.3em solid;
+	font-style: italic;
+	font-size: var(--size-step-1);
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+:is(h1, h2, h3, blockquote) {
+	--flow-space: 1.5em;
+}
+
+:is(h1, h2, h3) + * {
+	--flow-space: 0.5em;
+}
+
+.lede {
+	font-size: var(--size-step-1);
+	font-style: italic;
+	max-width: 50ch;
+}
+
+.lede + * {
+	--flow-space: 2em;
+}
+
+article {
+	max-width: 65ch;
+	margin-inline: auto;
+}
